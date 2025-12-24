@@ -1,0 +1,16 @@
+[package]
+name = "c2-trojan-function"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+encoding_rs = "0.8.35"
+screenshots = "0.8.10"
+sysinfo = "0.37.2"
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true
